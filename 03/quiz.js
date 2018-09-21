@@ -9,7 +9,6 @@
         ,{"url":"http://media.daum.net/photo/3899","img":"http://icon.daumcdn.net/w/c/12/05/81728227037306839.jpeg","title":"생후 6개월에 프랑스로 입양됐던 아이가..","id":"20120516030614331"}
         ,{"url":"http://sports.media.daum.net/general/gallery/STARKIMYUNA/index.html","img":"http://icon.daumcdn.net/w/c/12/05/81727815537682839.jpeg","title":"&#39;교생&#39; 김연아, 스승의날에도 인기폭발","id":"20120516092003892"}
     ];
-<<<<<<< HEAD
 
     var wrap = document.getElementById('wrap');
     var scroll=document.getElementById('scroll');
@@ -63,7 +62,6 @@
   }
 
     wrap.innerHTML = str;
-=======
     document.getElementById('startNum').innerHTML='All Page'
     var wrap = document.getElementById('wrap');
     var num=document.getElementById('startNum');
@@ -123,4 +121,4 @@
         }
             
     }
->>>>>>> a0ec08d76be979033051f268469149244e9e6b8c
+}
