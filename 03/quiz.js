@@ -9,59 +9,6 @@
         ,{"url":"http://media.daum.net/photo/3899","img":"http://icon.daumcdn.net/w/c/12/05/81728227037306839.jpeg","title":"생후 6개월에 프랑스로 입양됐던 아이가..","id":"20120516030614331"}
         ,{"url":"http://sports.media.daum.net/general/gallery/STARKIMYUNA/index.html","img":"http://icon.daumcdn.net/w/c/12/05/81727815537682839.jpeg","title":"&#39;교생&#39; 김연아, 스승의날에도 인기폭발","id":"20120516092003892"}
     ];
-
-    var wrap = document.getElementById('wrap');
-    var scroll=document.getElementById('scroll');
-    var str = '';
-    var sNum=1;
-
-    function pre(){
-      
-      var str = '';
-      if(sNum==1){
-        for(var i=0;i<3;i++){
-          str += '<img src="'+todayPhoto[i].img+'"> ';
-          sNum=3;
-        }else if(sNum==2){
-          var str = '';
-          for(var i=3;i<6;i++){
-          str += '<img src="'+todayPhoto[i].img+'"> ';
-          sNum=1;
-        }
-          else{
-            var str = '';
-            for(var i=6;i<9;i++){
-              str += '<img src="'+todayPhoto[i].img+'"> ';
-              sNum=2;
-            }
-      }
-    }
-  }
-}
-    function next(){
-      var str = '';
-      if(sNum==1){
-        for(var i=0;i<3;i++){
-          var str = '';
-          str += '<img src="'+todayPhoto[i].img+'"> ';
-          sNum=2;
-        }else if(sNum==2){
-          for(var i=3;i<6;i++){
-            var str = '';
-          str += '<img src="'+todayPhoto[i].img+'"> ';
-          sNum=3;
-        }
-          else{
-            for(var i=6;i<9;i++){
-              var str = '';
-              str += '<img src="'+todayPhoto[i].img+'"> ';
-              sNum=1;
-            }
-      }
-    }
-  }
-
-    wrap.innerHTML = str;
     document.getElementById('startNum').innerHTML='All Page'
     var wrap = document.getElementById('wrap');
     var num=document.getElementById('startNum');
@@ -92,27 +39,32 @@
             wrap.innerHTML = str;
             num.innerHTML=startNum+" / 3";
         }
-    });
-    btn2.addEventListener('click',function(){
-        if(start=1){
-            start=2;
-        }else if(start=2){
-            start=3;
+    }
+    function Next(){
+        if(startNum===0||startNum===3){
+            var str = '';
+            startNum=1;
+            for(var i=0;i<3;i++){
+                str+='<img src="'+todayPhoto[i].img+'">';
+            }
+            wrap.innerHTML = str;
+            num.innerHTML=startNum+" / 3";
+        }else if(startNum===1){
+            var str='';
+            startNum=2;
+            for(var i=3;i<6;i++){
+                str+='<img src="'+todayPhoto[i].img+'">';
+            }
+            wrap.innerHTML = str;
+            num.innerHTML=startNum+" / 3";
+        }else if(startNum===2){
+            var str='';
+            startNum=3;
+            for(var i=6;i<8;i++){
+                str+='<img src="'+todayPhoto[i].img+'">';
+            }
+            wrap.innerHTML = str;
+            num.innerHTML=startNum+" / 3";
         }
-    });
-
-    var start=1;
-    var end=todayPhoto.length;
-    var wrap = document.getElementById('wrap');
-
-    var str = '';
-    var str2='';
-    var str3='';
-
-    for(var i=0;i<=2;i++){
-        str += '<img src="'+todayPhoto[i].img+'"> ';
+            
     }
-    for(var i=3;i<=5;i++){
-        str2 += '<img src="'+todayPhoto[i].img+'"> ';
-    }
-}

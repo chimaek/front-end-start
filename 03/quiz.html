@@ -1,34 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>퀴즈2</title>
     <style>
         body{
             text-align: center;
-            margin: 20px;
+        }
+        div{
+            margin-bottom: 40px;
+        }
+        img{
+            margin-right: 40px;
+        }
+        input{
+            margin-right: 70px;
+        }
+        #btn2{
+            margin-left: 70px;
         }
     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>퀴즈</title>
 </head>
-<body>
+<body >
     <div id='wrap'>
             <img src="http://icon.daumcdn.net/w/c/12/05/81727815537682839.jpeg">
+            <img src="http://icon.daumcdn.net/w/c/12/05/81727815537682839.jpeg" >
             <img src="http://icon.daumcdn.net/w/c/12/05/81728227037306839.jpeg">
             <img src="http://icon.daumcdn.net/w/c/12/05/81728404408992839.jpeg">
             <img src="http://icon.daumcdn.net/w/c/12/05/81728759258718839.jpeg">
-            <img src="http://icon.daumcdn.net/w/c/12/05/81730673405131839.jpeg">
-            <img src="http://icon.daumcdn.net/w/c/12/05/82876307459008319.jpeg">
             <img src="http://icon.daumcdn.net/w/c/12/05/82877085750988319.jpeg">
             <img src="http://icon.daumcdn.net/w/c/12/05/82876693901189319.jpeg">
     </div>
-    <button type="button" id=btn1>이전 </button>
-    <button type="button" id=btn> a3/ </button>
-    <button type="button" id=btn2>다음 </button>
-    <script src="quiz.js">
-        
-        </script>
+    <input type="button" value="&lt;" onclick="Pre()" >&nbsp;
+    <span id='startNum'></span>
+    <input type="button" value=">" onclick="Next()" id='btn2'>
+    
+    <script src='quiz.js'>
+
+     </script>
+   
+
 </body>
 </html>
