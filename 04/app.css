@@ -6,16 +6,13 @@
     height: 50px;
     float: left;
   }
-  .wrap .b {
+  .wrap .b{
     background-color: black;
   }
   .wrap .w {
     background-color: white;
   }
-  .wrap .y {
-    background-color:yellow;
- }
- .wrap .r{
+  .wrap .r{
      background-color: red;
  }
  
