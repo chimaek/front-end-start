@@ -1,17 +1,21 @@
 #contain{
     margin-top: 20px;
-    width: 800px;
+    width:auto;
     height: 35px;
     border: 1px solid black;
     border-radius: 8px;
     box-sizing: border-box;
-    padding: 10px;
-    margin: auto ;
+    padding: 5px;
     vertical-align: middle;
+    margin-bottom: 20px;
 }
 #searchText{
     margin-bottom: 15px;
 }
-#nextPage{
+#nextBtn{
+    display: none;
+    text-align: center;
+    width: fit-content;
     margin-top: 15px;
+    margin: auto;
 }

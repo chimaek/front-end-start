@@ -10,16 +10,19 @@
 <body style="text-align: center">
     <h1><b> Open API 를 활용한 다음 검색</b></h1>
     <br>
-    <span>
-        <input type="text" id="searchText" autofocus value="제주대학교">
-        <input type="submit" value="검색" id="searchSubmit" onclick="">
+    <span id="search">
+        <input type="text" id="searchText" autofocus>
+        <input type="submit" value="검색" id="searchSubmit" >
     </span>
+    
     <div id="contain10">
-        
+
     </div>
-    <span>
-        <input type="submit" value="다음 페이지 보기" id='nextPage'>
+
+    <span id='btncontain'>
+        <input type="button" id="nextBtn" value="다음 페이지">
     </span>
+
     <script src='app.js'></script>
 </body>
 </html>
