@@ -6,15 +6,15 @@ function checkScroll(event){
     var 업버튼이_보여질_포지션=100;
  
     if(scrollTop>업버튼이_보여질_포지션){
-        up.fadeIn();
+        $up.fadeIn();
     }
 }
 
 
 function goTop(){
-    $('html , body').animate({scrollTop:0},)
+    $('html , body').animate({scrollTop:0},400)
 };
 
 
 $window.on('scroll',checkScroll);
-$up.click.
+$up.click(goTop)
