@@ -15,18 +15,35 @@ $('div')
     .css("background-color",'yellow')
     .css('border-color','red');
     */
-
+/*
     var $btn=$('#btn');
     var $txt=$('#txt');
     var $debug=$('#debug');
 
+
+
     $btn.on('click',function(event){
         console.log('click')
-        if($txt.val()===''){
+        $('h1').slideToggle("slow");
+
+       /* if($txt.val()===''){
             alert('검색어를 입려해주세요');
             return;
         }
 
         $debug.html($txt.val());
-
+        
     });
+
+    $('.wrap').on('click','div',function(event){
+
+        $(event.target).fadeOut();
+
+        //console.log()
+    })
+*/
+
+
+
+
+

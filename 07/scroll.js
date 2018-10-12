@@ -1,0 +1,20 @@
+var $window=$(window);
+var $up=$('#up');
+
+function checkScroll(event){
+    var scrollTop=$window.scrollTop();
+    var 업버튼이_보여질_포지션=100;
+ 
+    if(scrollTop>업버튼이_보여질_포지션){
+        up.fadeIn();
+    }
+}
+
+
+function goTop(){
+    $('html , body').animate({scrollTop:0},)
+};
+
+
+$window.on('scroll',checkScroll);
+$up.click.
