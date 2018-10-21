@@ -1,4 +1,8 @@
 
+img{
+    width: 135px;
+    height: 98px;
+}
 .glyphicon-refresh {
     -animation: spin .7s infinite linear;
     -ms-animation: spin .7s infinite linear;
