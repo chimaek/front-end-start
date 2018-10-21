@@ -1,13 +1,13 @@
 var list=document.getElementById('list');
 var page;
 var allBoard=document.querySelectorAll('.nav > li'); //nav클래스 밑에 있는 리스트 선택
-
-
-
-
+var str='';
 var changeBlock=null;
-
-    
+//*********로딩화면 ************//
+document.getElementById('more').style.display="none"
+window.onload=function(){
+    document.getElementById('loading').style.display="none"
+}
 for(var i=0;i<allBoard.length;i++){
     //*************** 클릭하여 탭이 바뀌는 이벤트 및 리스트에 뿌려주기***************//
   allBoard[i].addEventListener('click',function select(event){
@@ -18,11 +18,11 @@ for(var i=0;i<allBoard.length;i++){
     }
     board.classList.add("active")
     changeBlock=board;
+    str=''
     getJson();
     });  
-    
+   
 }
-
 function getJson(){
     
     var id=document.querySelector('.active').id;
@@ -33,7 +33,6 @@ function getJson(){
     
     fetch(eval(id)).then(function(response){
         response.json().then(function(json){
-            str='';
             var data = json.data;
             for(var i=0;i<data.length;i++){
                 var title=data[i].title;
@@ -44,7 +43,10 @@ function getJson(){
             }
             list.innerHTML=str;
         })
+        
     })
+    
+    document.getElementById('more').style.display="block";
     
 }
 
@@ -53,22 +55,20 @@ function getJson(){
 document.querySelector('.btn').addEventListener('click',function nextBtn(){
     if(document.querySelector('.active').innerText=="트렌딩"){
         page+=1;
-
+        
         getJson()
-
+        
     }else if(document.querySelector('.active').innerText=="이슈"){
         
         page+=1;
+        
         getJson()
-
+        
     }else if(document.querySelector('.active').innerText=="엔터"){
         
         page+=1;
+        
         getJson()
+        
     }
 });
-
-//*********로딩화면 ************//
-window.onload=function(){
-    document.getElementById('loading').style.display="none"
-};
