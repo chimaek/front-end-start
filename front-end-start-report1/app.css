@@ -3,6 +3,10 @@ img{
     width: 135px;
     height: 98px;
 }
+#contain{
+    padding: 10px;
+    border: 1px solid=black;
+}
 .glyphicon-refresh {
     -animation: spin .7s infinite linear;
     -ms-animation: spin .7s infinite linear;
