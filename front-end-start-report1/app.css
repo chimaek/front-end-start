@@ -1,12 +1,23 @@
 
 img{
-    width: 135px;
+    width: 180px;
     height: 98px;
 }
-#contain{
-    padding: 10px;
-    border: 1px solid=black;
+
+#list{
+    width: 100%;
+    text-align: center;
 }
+
+#contain{
+    width: 180px;
+    height: 180px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:10px;
+}
+
 .glyphicon-refresh {
     -animation: spin .7s infinite linear;
     -ms-animation: spin .7s infinite linear;
