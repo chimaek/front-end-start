@@ -34,13 +34,15 @@ function insertTodo(todo){
 form.addEventListener("submit",addTodo);
 
 function deleteTodo(){
-  var chkObj = document.getElementsByName("se");
-  for(i=0;i<chkObj.length;i++){
-    console.log(chkObj);
-    if(chkObj[i].checked){
-      list.innerHTML-=chkObj[i];
+ var a=document.querySelectorAll(".delete");
+
+ for(i=0;i<a.length;i++){
+    if(a[i].checked=true){
+      a[i].parentNode.remove("li");
     }
-    
-  }
+
+ }
+
+  
 }
-del.addEventListener('click',deleteTodo);
+del.document.addEventListener('click',deleteTodo);
