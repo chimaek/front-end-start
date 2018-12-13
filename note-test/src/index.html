@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>My Note</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script src="node_modules/file-saver/src/FileSaver.js"></script>
+  <script src="node_modules/screenfull/dist/screenfull.js"></script>
+</head>
+<body>
+<div class="header">
+  <h1>My Note</h1>
+  <div class="menu">
+    <button class="btn-newnote" onclick="reset()">새노트</button>
+    <button class="btn-savenote" onclick="noteSave()">노트저장</button>
+    <button class="btn_downloadNote"onclick="noteDownload()">노트다운로드</button>
+    <button class="btn_Fullscreen" onclick="fullScreen()">전체화면</button>
+    <button class="btn-about">about</button>
+  </div>
+</div>
+<div class="container">
+  <textarea id="memo" placeholder="내용을 입력하세요"></textarea>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

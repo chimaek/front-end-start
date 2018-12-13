@@ -1,0 +1,15 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "noteApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "me"
+  },
+  "author": "Chimaek",
+  "license": "MIT",
+  "dependencies": {
+    "file-saver": "^2.0.0",
+    "screenfull": "^3.3.3"
+  }
+}
