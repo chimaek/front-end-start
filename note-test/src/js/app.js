@@ -19,10 +19,12 @@ window.onload=function(){
 function noteDownload(){
     var blob = new Blob([textarea.value], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "Note.txt");
-}
-// 전체화면 구현
+};
+// 전체화면 구현(screenfull 사용)
 function fullScreen(){
-    
         screenfull.request();
-    
-}
+        screenfull.on('change', () => {
+            document.querySelector('html').addEventListener('click',function exit(){
+                screenfull.exit();
+        });
+})};
