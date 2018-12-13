@@ -1,6 +1,6 @@
 var textarea=document.getElementById('memo');
 
-//새 노트 클릭시 이벤트 발생 함수
+// 새 노트 클릭시 이벤트 발생 함수
 function reset(){
     textarea.value="";
 };
@@ -15,7 +15,7 @@ window.onload=function(){
         textarea.value=localStorage.getItem("note");
     }
 };
-//파일 저장하기 구현 (filesaver 사용)
+// 파일 저장하기 구현 (filesaver 사용)
 function noteDownload(){
     var blob = new Blob([textarea.value], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "Note.txt");
@@ -28,3 +28,4 @@ function fullScreen(){
                 screenfull.exit();
         });
 })};
+// about클릭시 팝업창으로 어플리케이션 정보 및 깃허브 주소 보여주기(제이쿼리 사용)
