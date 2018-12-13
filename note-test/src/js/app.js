@@ -28,4 +28,20 @@ function fullScreen(){
                 screenfull.exit();
         });
 })};
-// about클릭시 팝업창으로 어플리케이션 정보 및 깃허브 주소 보여주기(제이쿼리 사용)
+// about버튼클릭시 팝업창으로 어플리케이션 정보 및 깃허브 주소 보여주기(제이쿼리 사용)
+$('.btn-about').on({
+    click: function() {
+      $('.popup').addClass('popclassW');     
+      setTimeout(function() {
+         $('.popup').addClass('popclassH');
+       },300);
+    }
+  });
+  $('.popup').on({
+    click: function() { 
+      $('.popup').removeClass('popclassH');
+      setTimeout(function() {
+         $('.popup').removeClass('popclassW');
+       },300); 
+    } 
+  });
